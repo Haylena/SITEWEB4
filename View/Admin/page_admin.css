@@ -1,0 +1,42 @@
+        .personne {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centre le contenu */
+        }
+
+            .personne .lien-personnalise {
+                display: inline-block; /* Affiche les liens c�te � c�te */
+                margin: 20px;
+                padding: 10px 20px;
+                background-color: #333; /* Couleur de fond des liens */
+                color: white;
+                text-decoration: none; /* Supprime le soulignement des liens */
+                border-radius: 5px;
+                transition: background-color 0.3s; /* Animation au survol */
+            }
+
+                .personne .lien-personnalise:hover {
+                    background-color: red; /* Couleur de fond au survol */
+                }
+
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+            .back-button button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .back-button button:hover {
+                    background-color: red;
+                }

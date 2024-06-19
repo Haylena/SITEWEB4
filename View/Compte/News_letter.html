@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="News_letter.css">
+</head>
+<header>
+    <div class="logo">
+        <a href="#">
+            <img src="../Images/logo_cinewaves.png" alt="Logo Cinéwaves">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Cinéma</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="Rechercher un film, une salle...">
+    </div>
+</header>
+<body>
+    <aside id="menu">
+        <ul>
+            <a href="test.html"><li>MES FILMS</li></a>
+            <a href=""><li>MES CRITIQUES</li></a>
+            <a href=""><li>MES AMIS</li></a>
+            <a href=""><li>MES CINÉMAS</li></a>
+            <a href="preferences.html"><li>MES PRÉFÉRENCES</li></a>
+            <a href=""><li>NOTEZ LES FILMS</li></a>
+        </ul>
+    </aside>
+
+    <div class="middle-side">
+        <h1 class="move-left">MES PREFERENCES</h1>
+        <div class="tabs">
+            <ul>
+                <a href="#" class="tab"><li>PROFIL</li></a>
+                <a href="#" class="tab"><li>NEWSLETTER</li></a>
+            </ul>
+        </div>
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Newsletter Abonnement</h2>
+        
+            <label for="newsletter-checkbox">J'accepte de recevoir les newsletters AlloCiné :</label>
+            <input type="checkbox" id="newsletter-checkbox" name="newsletter-checkbox">
+        
+            <ul class="newsletter-list">
+                <li>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter-cinema" name="newsletter-cinema">
+                        <label for="newsletter-cinema">Les newsletters "Cinéma"</label>
+                    </div>
+                    <p>Tous les mercredis découvrez les nouveaux films à l’affiche, l’actu ciné et les bandes-annonces à ne pas manquer</p>
+                </li>
+                <li>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter-notifications" name="newsletter-notifications">
+                        <label for="newsletter-notifications">Notifications</label>
+                    </div>
+                    <p>Recevez une notification lorsqu’un film que vous souhaitez voir est en salle ou une nouvelle saison de votre série préférée est disponible.</p>
+                </li>
+            </ul>
+        
+            <input type="email" class="newsletter-input" placeholder="Votre adresse email">
+        
+            <button class="newsletter-submit">S'abonner</button>
+        </div>
+    </div>
+</body>
+</html>
