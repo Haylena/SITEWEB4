@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Cinéma</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <div class="faq-container">
+        <h2>FAQ - Cinéma</h2>
+        <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer('answer1')">Comment puis-je acheter des billets sur votre site ?</div>
+            <div class="faq-answer" id="answer1"> Vous pouvez acheter des billets directement sur notre site en sélectionnant le film et la séance de votre choix. Vous serez ensuite redirigé vers une page vous permettant d'effectuer le paiement.</div>
+
+            <div class="faq-question" onclick="toggleAnswer('answer2')">Avez-vous des installations pour les personnes à mobilité réduite ??</div>
+            <div class="faq-answer" id="answer2"> Notre cinéma est accessible aux personnes à mobilité réduite, avec des sièges réservés, des rampes d'accès et des toilettes adaptées. N'hésitez pas à contacter notre personnel pour toute assistance spécifique.</div>
+
+            <div class="faq-question" onclick="toggleAnswer('answer3')">Proposez-vous des séances privées ou des locations de salle ?</div>
+            <div class="faq-answer" id="answer3">Oui, nous offrons des options de location de salle pour des événements privés ou des projections spéciales. Contactez-nous pour plus d'informations sur les tarifs et les disponibilités.</div>
+
+            <div class="faq-question" onclick="toggleAnswer('answer4')"> Puis-je changer d'avis et choisir une autre place après avoir payé?</div>
+            <div class="faq-answer" id="answer4"> Bien sûr, si des places sont disponibles, vous êtes libre de changer votre choix de siège.</div>
+
+            <div class="faq-question" onclick="toggleAnswer('answer5')"> Comment contacter le service client?</div>
+            <div class="faq-answer" id="answer5">Si vous avez une question particuliere, vous pouvez envoyer un message directement au service client grâce à la messagerie interne.</div>
+
+            <div class="faq-question" onclick="toggleAnswer('answer6')"> Que faire si ma séance a été annulée?</em> ?</div>
+            <div class="faq-answer" id="answer6">Si votre séance à été annulée vous serez directement remboursé sous 24h. Il vous restera juste à reserver pour une autre séance.</div>
+           
+            <div class="faq-question" onclick="toggleAnswer('answer7')"> Comment connaître les dates de mise en vente des places?</em> ?</div>
+            <div class="faq-answer" id="answer7">En vous inscrivant à notre newsletters et en nous suivant sur les résaux sociaux vous aurez toute les informations en avant-premiere.</div>
+            
+            <div class="faq-question" onclick="toggleAnswer('answer8')"> Que faire si ma séance a été annulée?</em> ?</div>
+            <div class="faq-answer" id="answer8">Si votre séance à été annulée vous serez directement remboursé sous 24h. Il vous restera juste à reserver pour une autre séance.</div>
+            
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

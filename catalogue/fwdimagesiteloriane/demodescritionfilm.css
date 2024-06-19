@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Utilisation de Roboto comme police de caractères */
+    background-color: #ffffff;
+}
+
+.menu-container {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    text-align: right; /* Aligner les éléments de menu à droite */
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px; /* Ajout d'un peu d'espace autour du menu */
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-item {
+    font-family: 'Poppins', sans-serif;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(28, 26, 26); /* Couleur initiale des éléments de menu */
+    font-weight: 400; /* Poids normal de la police */
+    margin-left: 20px; /* Espace entre les éléments de menu */
+    transition: color 0.3s ease; /* Transition en douceur pour le changement de couleur */
+}
+
+.menu-item:hover {
+    font-family: 'Poppins', sans-serif;
+    color:#a80d0d; /* Changement de couleur au survol */
+    font-weight: 700; /* Augmentation du poids de la police pour un effet de survol */
+}
+
+/* Optionnel : ajustements de design réactif */
+@media screen and (max-width: 768px) {
+    .menu {
+        text-align: center; /* Centrer les éléments de menu pour les petits écrans */
+    }
+    .menu-item {
+        display: block;
+        margin: 5px 0; /* Empilement vertical des éléments de menu avec espacement */
+    }
+}
+
+/* Styles pour la page de description du film */
+.film-container {
+    display: flex;
+    margin: 20px;
+    background-color: #f2f2f2; /* Gris clair */
+    padding: 20px;
+}
+
+.film-image img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.film-details {
+    flex-grow: 1;
+}
+
+.film-details h1 {
+    color: #131010; /* Gris foncé */
+}
+
+.synopsis {
+    font-size: 16px;
+    color: #666;
+}
+
+.additional-details p {
+    margin: 10px 0;
+}
+
+.additional-details strong {
+    color: #333;
+}
+
+/* Style pour les informations supplémentaires */
+.additional-details span {
+    color: #a80d0d; /* Rouge */
+}
+/* Styles pour la barre de films suggérés */
+.film-suggestions {
+    background-color: #333; /* Gris foncé */
+    padding-top: 10px; /* Padding en haut pour le titre */
+    padding-bottom: 10px; /* Padding en bas pour la fin de la bande */
+}
+
+/* Styles pour le titre dans la barre de films suggérés */
+.suggestions-title {
+    color: rgb(220, 220, 220);
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    
+    
+}
+
+/* Styles pour le conteneur des films */
+.films-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0; /* Padding réduit autour des films */
+}
+
+/* Styles pour les liens et images des films */
+.films-container a {
+    margin-right: 13px; /* Espace entre les films */
+}
+
+.films-container img {
+    max-height: 170px; /* Ajustez la hauteur des images si nécessaire */
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.film-suggestions a:hover img {
+    transform: scale(1.05); /* Légère augmentation de taille */
+    filter: brightness(140%); /* Rend l'image plus lumineuse */
+}
+
+/* Effet de légère rotation au survol */
+.film-suggestions a:hover img {
+    transform: rotate(5deg);
+}
+
+/* Styles supplémentaires pour un aspect professionnel */
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+section, article {
+    padding: 20px;
+    margin: 20px 0;
+}
+.film-suggestions img.clicked {
+    transform: scale(1.1) rotate(-10deg);
+}

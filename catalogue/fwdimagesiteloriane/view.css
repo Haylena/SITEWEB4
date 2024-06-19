@@ -1,0 +1,357 @@
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+}
+/*Définit le conteneur pour un diaporama.
+ position: relative; permet de positionner les éléments enfants absolument par rapport à ce conteneur.
+  margin: auto; centre le conteneur.*/
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: rgb(17, 17, 17, 0.7);
+  font-size: 15px;
+  padding: 70px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  /* text-align: center; */
+}
+/*Styles pour le texte de légende dans le diaporama.
+ Il est positionné absolument en bas du conteneur avec un fond semi-transparent.
+ La largeur est de 100% pour qu'il occupe toute la largeur du conteneur.*/
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/*Styles pour le numéro de l'imaage dans le diaporama.
+Il est positionné absolument en haut du conteneur.*/
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+/*Définit le style des points de navigation pour le diaporama.
+ .active change la couleur de fond pour le point actif.*/
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*Applique une animation de fondu aux éléments avec la classe .
+/* fade. L'animation est définie par @keyframes. */
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/* Réduit la taille de la police pour
+ .text sur les écrans de moins de 300px de large.*/
+
+atm-movie img{
+  width: 100%;
+  height: 800px !important; 
+}
+/* *Définit la largeur et la hauteur des images 
+dans l'élément atm-movie. */
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* /*Styles pour les boutons de navigation du diaporama.
+ .next est positionné sur le côté droit.* */
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/*Ajoute un fond noir semi-transparent aux boutons de navigation
+lorsque l'utilisateur passe la souris dessus.*/
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*Réduit la taille de la police pour les boutons 
+et le texte sur les écrans de moins de 300px de large.*/
+
+/* Css for available */
+.row  {
+  display:flex;
+  align-items:center
+}
+
+.thumb-box {
+  display:flex;
+  max-width:33.3333%;
+  margin:0 15px;
+  position:relative;
+
+   
+    
+}
+
+
+.thumb-box a {
+  padding:0;
+  position: relative;
+    width: 100%;
+    height: 100%;
+  z-index:9997;
+}
+
+.thumb-box img {
+ 
+    width:100%;
+    height:280px;
+    float:left;
+  }
+
+.overlay-box {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  z-index:9998;
+  left:0;
+  padding:5%;
+      background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.75));
+}
+/*Ceci définit le style pour une overlay-box, 
+qui est une boîte de superposition pour les vignettes (thumb-box). 
+Elle est positionnée absolument au bas des vignettes,
+ couvrant 90% de leur largeur avec un fond gradient semi-transparent.*/
+
+.meta {
+  font-size:14px;
+  display:block;
+  color: white
+  
+}
+
+.main-title {
+  font-size:16px;
+  display:block;
+  font-weight:700;
+  text-shadow:0 0 1px rgba(0,0,0,0.5);
+  color: white;
+}
+
+.available{
+  margin: 0 2%;
+}
+
+.description {
+  color:#ccc;
+  font-size:13px;
+  margin-top:5px; 
+  display:block;
+  color: #ccc;
+    max-height: 0;
+    line-height: 18px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, max-height 0.4s ease-out, margin 0.4s;
+}
+/*Définit le style pour la description dans les vignettes (thumb-box).
+  Elle est cachée par défaut avec une hauteure maximale de 0px.
+    Lorsque l'utilisateur passe la souris sur une vignette,
+    la description apparaît avec un transition d'opacité et de hauteur.
+    Ces règles CSS appliquent des styles spécifiques à la meta, 
+    au main-title, et à la description dans les vignettes.
+     Elles incluent la taille de la police, la couleur, 
+     le poids de la police pour le titre,
+      et des styles de transition pour la description.*/
+
+
+
+.thumb-box a:hover .description {
+    opacity:1;
+        max-height: 100px;
+        margin-top: 5px;
+        transition: opacity 0.4s ease-out, max-height 0.9s ease-out
+}
+/*Cet effet est appliqué lorsque l'utilisateur survole les liens (a) dans .
+thumb-box. Il rend la description visible et anime son apparition.*/
+
+.thumb-box a:hover .overlay-box {
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 1));
+
+}
+/*Au survol, le fond de l'overlay-box devient moins transparent, 
+/* accentuant l'effet de superposition.*/ */
+/*Ces styles sont pour un layout de galerie avec des vignettes (thumb-box).
+ Ils définissent le positionnement, la taille et les effets au survol pour les images
+  et les textes associés.*/
+.copyright{
+  padding: 20px;
+  text-align: center;
+  color: var(--backgroung-color);
+}
+/* /*Définit le style pour la section copyright en bas de page.* */
+@media (max-width: 1800px){
+  .home-text{
+     padding: 0 100px;
+  }
+}
+/*Réduit le padding pour .
+/* home-text sur les écrans jusqu'à 1800px de large.* */
+@media (max-width: 991px){
+ header{
+  padding: 18px 4%;
+ }
+ section{
+  padding: 50px 4%;
+ }
+ .home-text{
+  padding: 0 4%; 
+ }
+ /* Réduit le padding pour header, section,
+  et .home-text, et ajuste la taille de la police pour .
+  home-text sur les écrans jusqu'à 991px de large. */
+ .home-text h1{
+  font-size: 3rem;
+ }
+}
+@media (max-width: 774px){
+  header{
+      padding: 12px 4%;
+  }
+  /*Adapte plusieurs composants pour les écrans jusqu'à 774px,
+  comme la modification du padding 
+  et des styles de la barre de navigation (navbar).*/
+  /*Réduit le padding pour header sur les écrans jusqu'à 774px de large. 
+  /*Ajuste la taille de la pocile pour .home-text sur les écrans jusqu'à 774px de large. */
+  #catalogue-icon{
+      display: initial;
+      color: var(--backgroung-color);
+  }
+  header.shadow #catalogue-icon{
+      color: var(--text-color);
+  }
+  .navbar{
+      position: absolute;
+      top: -570px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--backgroung-color);
+      row-gap: 1.4rem;
+      padding: 20px;
+      box-shadow: 4px 4px 0 4px rgb(14 55 54/ 15%);
+      transition: 0.2s all linear;
+      text-align: center;
+  }
+  .navbar a{
+      width: 100%;
+      color: var(--text-color);
+  }
+  .navbar a:hover{
+      color: var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+  }
+  .navbar a::after {
+      display: none;
+  }
+  .navbar.active{
+      top: 100%;
+  }
+  .home-text h1{
+      font-size: 2.4rem;
+  }
+  .btn{
+     padding: 0.6rem 1.2rem ; 
+  }
+  .movies-container{
+      grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+  }
+}
+/*Ces règles ajustent le style pour des écrans de largeur inférieure à 774px.
+ Elles modifient le padding du header,
+  la disposition et le style de la .navbar, 
+  la taille de la police pour .home-text h1,
+   et la disposition des éléments dans .movies-container.*/
+
+
+@media(max-width:472px){
+  .newsletter form .email{
+      width: auto;
+  }
+  .footer{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+  }
+}
+/*Pour les écrans plus petits (jusqu'à 472px),
+le formulaire de la newsletter et le footer sont ajustés pour mieux s'adapter à la taille réduite.
+Le formulaire de newsletter devient plus flexible en largeur, 
+et le footer passe en disposition de colonne pour une meilleure lisibilité.*/
+
+@media(max-width: 370px){
+  header{
+      padding: 6px 4%;
+  }
+  .home-text h1{
+      font-size: 1.7rem;
+  }
+  .play{
+      right: 2rem;
+      bottom: 8%;
+  }
+  .play .bx{
+      padding: 7px;
+  }
+  .movies-container{
+      grid-template-columns: repeat(auto-fit,minmax(140px, auto));
+  }
+  .box .box-img{
+      height: 240px;
+
+  }
+}
+/*Ces règles s'appliquent aux appareils très petits (jusqu'à 370px de large).
+Elles réduisent encore plus la taille de la police pour
+.home-text h1, ajustent la position et le padding de .play .bx, 
+et adaptent la disposition de grille et la taille des éléments dans .movies-container.*/

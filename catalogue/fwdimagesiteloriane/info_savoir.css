@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212526;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+}
+
+.content p{
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.container,
+.container1,
+.container2,
+.container3,
+.container4
+{
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+}
+
+.container h2, .container p, .container p1,
+.container1 h2, .container1 p, .container1 p1,
+.container2 h2, .container2 p, .container2 p1,
+.container3 h2, .container3 p, .container3 p1,
+.container4 h2, .container4 p, .container4 p1
+{
+    color: white;
+    padding-top: 10px;
+}

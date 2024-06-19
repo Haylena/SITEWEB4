@@ -1,0 +1,485 @@
+/* Importation de la police Google 'Poppins' avec différents poids de police*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&display=swap');
+/* Le bloc suivant s'applique à tous les éléments de la page*/
+*{
+    /*Définit la police par défaut pour tous les éléments de la page*/
+    font-family: 'Poppins', sans-serif; 
+    /*Supprime les marges et les rembourrages par défaut*/
+    margin: 0;
+    /*Supprime les padding par défaut */
+    padding: 0;
+    /* Fait en sorte que la largeur et la hauteur incluent le padding et les bordure */
+    box-sizing: border-box;
+    /* Supprime les puces des listes*/
+    list-style: none;
+    /*Supprime les soulignements des liens*/
+    text-decoration: none;
+    /* Ajoute un padding en haut lors du défilement*/
+    scroll-padding-top: 2rem;
+    /*Fait en sorte que le défilement soit fluide */
+    scroll-behavior: smooth;
+}
+/*Définition de certaines variables CSS pour une utilisation facile dans le reste du fichier */
+/* Scroll Reveal Animation*/
+/* Some Variables */
+:root{
+    /*Couleur principale*/
+    --main-color:#ff2c1f;
+    /*Couleur du texte */
+    --text-color:#020307;
+    /*Couleur de fond*/
+    --backgroung-color:#fff;
+}
+/*Personnalisation de la barre de défilement pour les navigateurs Webkit(Chrome,Safari) */
+/* Custom Scroll Bar*/
+html::-webkit-scrollbar{
+    /*Définit la largeur de la barre de défilement*/
+    width: 0.5rem;
+    /*Définit la couleur de fond de la barre de défilement*/
+    background: var(--text-color);
+}
+html::-webkit-scrollbar-thumb{
+    /*Définit la couleur du curseur de la barre de défilement*/
+    background: var(--main-color);
+    /*Arrondit les coins du curseur de la barre de défilement*/
+    border-radius: 5rem;
+}
+/*Définit les couleur de fond et de texte pour le corps de la page*/
+body{
+    /*Couleur de fond*/
+    background: var(--text-color);
+    /*Couleur du texte*/
+    color: var(--backgroung-color);
+}
+/*Définit le padding pour toutes les sections*/
+section{
+    /*Ajoute un padding en haut et en bas de 4.5rem et à gauche et à droite de 0*/
+    padding: 4.5rem 0 1.5rem;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255 255 255 /0.9);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+}
+
+.logo {
+    color: #f60c0c;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+    .logo span {
+        color: #000;
+    }
+
+.menu li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+    .menu li a {
+        font-size: 14px;
+        text-decoration: 0;
+        color: #f60c0c;
+        position: relative;
+    }
+
+        .menu li a::before {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            content: "";
+            width: 0;
+            height: 2px;
+            border-radius: 6px;
+            background-color: #000;
+            transition: 0.5s;
+        }
+
+        .menu li a:hover::before {
+            width: 100%;
+        }
+
+        .menu li a::after {
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            content: "";
+            width: 0;
+            height: 2px;
+            border-radius: 6px;
+            background-color: #f60c0c;
+            transition: 0.5s;
+        }
+
+        .menu li a:hover::after {
+            width: 100%;
+        }
+
+        .menu li a:hover {
+            color: #000;
+        }
+/*Personnalisation de l'icône à l'intérieur du logo*/
+.logo .bx{
+    /*Définit la taille de la police */
+    font-size: 24px;
+    /*Définit la couelur du texte*/
+    color: var(--main-color);
+}
+/*Personnalisation de la barre de navigation*/
+.navbar{
+    /*Utilise flexbox  pour positionner les éléments à l'intérieur de la barre de navigation*/
+    display: flex;
+    /*Définit l'espace entre les colonnes à 5rem*/
+    column-gap: 5rem;
+}
+/*Personnalisation des éléments de liste à l'intérieur de la barre de navigation*/
+.navbar li{
+    /*Positionne les éléments de liste relativement  à leur position normale*/
+    position: relative;
+}
+/*Personnalisation des liens à l'intérieur de la barre de navigation*/
+.navbar a{
+    /*Définit la taille de la police à 1rem*/
+    font-size: 1rem;
+    /*Définit le poids de la police*/
+    font-weight: 500;
+    color: var(--backgroung-color);
+}
+/* Personnalisation de l'effet de survol des liens à l'intérieur de la barre de navigation */
+.navbar a::after
+/*Définit le contenu de l'élément*/
+    content: '';
+    /*Définit la largeur de l'élément*/
+    width: 0;
+    /* Définit la hauteur de l'élément*/
+    height: 2px;
+    /*Définit la couleur de fond de l'élément*/
+    background: var(--main-color);
+    /*Positionne l'élément absolument par rapport à son parent le plus proche*/
+    position: absolute;
+    /*Positionne l'élément à -4px du bas de don parent*/
+    bottom: -4px;
+    /*Positionne l'élément à 0px de la gauche de son parent*/
+    left: 0; 
+    /*Ajoute une transition de 0.4s à toutes les propriétés modifiées*/
+    transition: 0.4s all linear;
+}
+/*Personnalisation de l'effet de survol et de l'élément actif des liens à l'intérieur de la barre de navigation*/
+.navbar a:hover::after, 
+.navbar .catalogue-active::after {
+    /*Définit la largeur de l'élément à 100%*/
+    width: 100%;
+}
+/* Personnalisation de l'icône du catalogue*/
+#catalogue-icon{
+    /*Définit la taille de la police*/
+    font-size: 24px;
+    /* /* Change * */
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
+.btn{
+    padding: 0.7rem 1.4rem;
+    background: var(--main-color);
+    color: var(--backgroung-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: #fa1216;
+}
+.container{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2,3,7,0.4);
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+.swipper-pagination-bullet{
+    width:  6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background-color: var(--backgroung-color) !important;
+    opacity: 1 !important;
+}
+.swipper-pagination-bullet-active{
+    width: 1.5rem !important ;
+    background: var(--backgroung-color) !important;
+}
+.catalogue-text{
+    z-index: 1000;
+    padding: 0 150px;
+}
+.catalogue-text span{
+    color: var(--backgroung-color);
+    font-weight:  500;
+    text-transform: uppercase;
+}
+.catalogue-text h1{
+    color: var(--backgroung-color);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.play{
+    position: absolute;
+    right:  4rem;
+    bottom: 10%;
+}
+.play .bx{
+    background: var(--backgroung-color);
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px  solid rgb(2,3,7,0.4);
+    color: var(--main-color);
+}
+.play .bx:hover{
+    background: var(--main-color);
+    color: var(--backgroung-color);
+    transition: 0.2s all linear;
+}
+.heading{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--main-color);
+}
+.movies-container{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.box .box-img{
+    width: 100%;
+    height: 270px;
+}
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .box-img img:hover{
+    transform:translateY(-10px);
+    transition: 0.2s all linear;
+}
+.box h3{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.box span{
+    font-size: 13px;
+}
+.coming-container{
+display: grid;
+gap: 1rem;
+max-width: 968px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2rem;
+}
+.coming-container .box-img img:hover{
+    transform: translateY(0);
+}
+.coming-container .box{
+    width: 100px;
+}
+.newsletter{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+.newsletter h2{
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+.newsletter form{
+    background: var(--backgroung-color);
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.newsletter form input{
+    border: none;
+    outline: none;
+}
+.newsletter form .email{
+    width: 280px;
+}
+.newsletter form input::placeholder{
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.newsletter .btn{
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+.footer{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social .bx {
+    background: var(--backgroung-color);
+    padding: 2px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px soli rgb(2,3,7,0.4);
+    color: var(--main-color);
+}
+.social .bx:hover {
+    background: var(--main-color);
+    color: var(--backgroung-color);
+    transition: 0.2s all linear; 
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--backgroung-color);
+}
+@media (max-width: 1800px){
+    .home-text{
+       padding: 0 100px;
+    }
+}
+@media (max-width: 991px){
+   header{
+    padding: 18px 4%;
+   }
+   section{
+    padding: 50px 4%;
+   }
+   .home-text{
+    padding: 0 4%; 
+   }
+   .home-text h1{
+    font-size: 3rem;
+   }
+}
+@media (max-width: 774px){
+    header{
+        padding: 12px 4%;
+    }
+    #catalogue-icon{
+        display: initial;
+        color: var(--backgroung-color);
+    }
+    header.shadow #catalogue-icon{
+        color: var(--text-color);
+    }
+    .navbar{
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--backgroung-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54/ 15%);
+        transition: 0.2s all linear;
+        text-align: center;
+    }
+    .navbar a{
+        width: 100%;
+        color: var(--text-color);
+    }
+    .navbar a:hover{
+        color: var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+    }
+    .navbar a::after {
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .btn{
+       padding: 0.6rem 1.2rem ; 
+    }
+    .movies-container{
+        grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+    }
+}
+@media(max-width:472px){
+    .newsletter form .email{
+        width: auto;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+@media(max-width: 370px){
+    header{
+        padding: 6px 4%;
+    }
+    .home-text h1{
+        font-size: 1.7rem;
+    }
+    .play{
+        right: 2rem;
+        bottom: 8%;
+    }
+    .play .bx{
+        padding: 7px;
+    }
+    .movies-container{
+        grid-template-columns: repeat(auto-fit,minmax(140px, auto));
+    }
+    .box .box-img{
+        height: 240px;
+
+    }
+}

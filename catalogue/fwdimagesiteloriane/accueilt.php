@@ -1,0 +1,68 @@
+<?php
+session_start();
+if (!$_SESSION['pseudo']) {
+    header('Location:connexion.php');
+}
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href=" accueil.css" />
+<title>Mon Compte</title>
+<body>
+    <aside id="menu">
+        <ul>
+            <li><a href="accueilt.php">Accueil</a></li>
+            <li><a href="info.html">Informations personnelles</a></li>
+            <li><a href="d&c/Compte.html">Données et confidentialité</a></li>
+            <li><a href="#">Sécurité</a></li>
+            <li><a href="#">Contacts et partage</a></li>
+            <li><a href="#">A propos</a></li>
+        </ul>
+
+    </aside>
+
+    <div id="content">
+        <h1>Bienvenue </h1>
+        <div class="two_ligne_text">
+            <p>Gérez vos informations, ainsi que la confidentialité et la sécurité de vos données <br /> pour profiter aux mieux des services Cinéwaves</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <h3>Confidentialité et <br />Personnalisation</h3>
+            <a href="#">
+                <img src="../../Images/Image Confidentialité.jpg" alt="Sécurité" />
+            </a>
+            <div class="text">
+                <p>Consultez les données de votre compte Cinéwaves et selectionnez les informations à enregistrer pour améliorer votre expérience du cinéma.</p>
+            </div>
+        </div>
+        <div class="box2">
+            <h3>Sécurité</h3>
+            <a href="#">
+                <img src="../../Images/Image_Securite.jpg" alt="Sécurité" />
+            </a>
+            <div class="text">
+                <p>Consulter notre politique de sécurité.</p>
+                <p>Renforcer votre compte grâce à la double authentification</p>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="box3">
+            <h3>Vous recherchez autre chose ?</h3>
+            <ul>
+                <li><button><a href="#">Recherchez dans votre compte Cinéwaves </a></button><span class="decoration"></span></li>
+                <li><button><a href="#">Affichez les options d'aides</a></button></li>
+                <li><button><a href="#">Envoyez des commentaires </a></button></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>

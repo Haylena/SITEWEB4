@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333; /* Couleur de texte plus professionnelle */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+.faq-container {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-weight: 700; /* Police plus audacieuse pour les titres */
+    margin-bottom: 20px; /* Espace supplémentaire sous le titre */
+}
+
+.faq-question {
+    background-color: #830808;
+    color: white;
+    padding: 12px 15px; /* Ajustement du padding */
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700; /* Rendre la question audacieuse */
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
